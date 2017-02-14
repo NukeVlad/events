@@ -17,13 +17,13 @@
 		</thead>
 		<tbody>
 			<tr class="calendar-head">
-				<th>T2</th>
-				<th>T3</th>
-				<th>T4</th>
-				<th>T5</th>
-				<th>T6</th>
-				<th>T7</th>
-				<th>CN</th>
+				<th>{LANG.week_T2}</th>
+				<th>{LANG.week_T3}</th>
+				<th>{LANG.week_T4}</th>
+				<th>{LANG.week_T5}</th>
+				<th>{LANG.week_T6}</th>
+				<th>{LANG.week_T7}</th>
+				<th>{LANG.week_CN}</th>
 			</tr>
 			<!-- BEGIN: week -->
 			<tr>
