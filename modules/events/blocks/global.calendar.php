@@ -75,12 +75,12 @@ if (!nv_function_exists('nv_events_calendar')) {
         $ajax_url = NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&' . NV_NAME_VARIABLE . '=' . $module_name . ($op == 'main' ? '' : ('&' . NV_OP_VARIABLE . '=' . (empty($array_op) ? $op : implode('/', $array_op))));
         $xtpl->assign('AJAX_URL', $ajax_url);
 
-        // Lấy ngày đầu, ngày cuối của tháng
+        // Получить первый день, последнм день месяца
         $current_month = date('n', $load_event_calendar);
         $time_start_month = mktime(0, 0, 0, $current_month, 1, date('Y', $load_event_calendar));
         $time_end_month = mktime(0, 0, 0, $current_month == 12 ? 1 : $current_month + 1, 1, $current_month == 12 ? date('Y', $load_event_calendar) + 1 : date('Y', $load_event_calendar)) - 86400;
 
-        // Lấy ngày bắt đầu, kết thúc lịch
+        // Получить дату начала, конца календаря
         $start_week = date('N', $time_start_month);
         $end_week = date('N', $time_end_month);
         $time_start_calendar = $start_week == 1 ? $time_start_month : ($time_start_month - 86400 * ($start_week - 1));
